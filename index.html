@@ -1,0 +1,115 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Home Lead Page</title>
+    <!--a link to Bootstrap’s content delivery network (CDN)-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-dark">
+    
+    <div class="jumbotron">
+        <!--add class "dispaly 4" for font size and style-->
+        
+        <h1 class="display-4">Best Home</h1>
+        <h3 class="subtitle text-center">A Real Estate Company you can count on!</h3>
+    </div>
+    <!--container will span the width of viewpoint-->
+    <div class="container-fluid">
+        <!--row will make sure title and paragraph will align-->
+        <div class="row">
+            <div class="col-md-5">
+                <h3><small>Please fill out the form to be reached by our top Agents! </small></h3><br>
+                <center><img src="bestHomeLogo.jpg"></center>
+            </div>
+            <div class="col-md-7">
+                <form class="bg-dark" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                    <input type=hidden name="oid" value="00D4W000000FAQy">
+                    <input type=hidden name="retURL" value="https://besthome-developer-edition.na139.force.com">
+                    
+                    <h4>Lead Form: </h4>
+                
+                    <!--class="list-group": Bootstrap apply predetermined styling to the list-->
+                    <ul class="bg-dark list-group">
+                        <!--add the list items-->
+                        <li class="bg-dark list-group-item">
+                            <label for="lead_source">Lead Source: </label>
+                            <select  id="lead_source" name="lead_source">
+                                <option value="Web">Web</option>
+                            </select><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="first_name">First Name: </label>
+                            <input  id="first_name" maxlength="40" name="first_name" size="17" type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="last_name">Last Name: </label>
+                            <input id="last_name" maxlength="80" name="last_name" size="17" type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="phone">Phone: </label>
+                            <input id="phone" maxlength="40" name="phone" size="21" type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="email">Email: </label>
+                            <input  id="email" maxlength="80" name="email" size="22" type="text" /><br>
+                        </li>
+                        
+                        <li class="bg-dark list-group-item">
+                            <label for="city">City: </label>
+                            <input  id="city" maxlength="40" name="city" size="24" type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="state">State/Province: </label>
+                            <input  id="state" maxlength="20" name="state" size="13" type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="country">Country: </label>
+                            <input  id="country" maxlength="40" name="country" size=19 type="text" /><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <label for="description">Description: </label>
+                            <textarea rows="2" cols="50" name="description"></textarea><br>
+                        </li>
+                        <li class="bg-dark list-group-item">
+                            <input type="submit" name="submit">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<!--form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D4W000000FAQy">
+<input type=hidden name="retURL" value="https://besthome-developer-edition.na139.force.com"-->
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="pingy.lin@akidevlabs.com">                                       -->
+<!--  ----------------------------------------------------------------------  -->
+
